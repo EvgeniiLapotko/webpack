@@ -63,7 +63,6 @@ module.exports = {
     mode: "development",
     entry: {
         main: "./index.jsx",
-        analytics: "./analytics.ts",
     },
     output: {
         filename: filenames("js"),
@@ -71,7 +70,7 @@ module.exports = {
     },
     resolve: {
         //указываем расширения что бы не прописывать в пути при импортах
-        extensions: [".js"],
+        extensions: [".js", "jsx"],
         alias: {
             //для того что бы сократить пути при импортах в точку входа
             "@models": path.resolve(__dirname, "src/models"),
